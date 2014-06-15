@@ -405,10 +405,6 @@ body:not(.ios) .share-menu ul li:nth-child(2):hover {
  * Defines the structure and styles of the entire theme.
  ******************************************************************************/
 
-#tumblr_controls {
-    z-index: 4; /* popover needs to ride on top */
-}
-
 /** Scrolling **/
 body.is-scrolling {
     pointer-events: none;
@@ -971,12 +967,6 @@ body.android-lt-4-4 {
         font-size: 15px;
     }
 
-    #tumblr_controls {
-        position: fixed;
-        margin-top: 3px;
-        z-index: 5; /* z-index above slide down nav menu */
-    }
-
     .no-image #header {
         margin-top: 120px;
     }
@@ -1068,7 +1058,7 @@ body.android-lt-4-4 {
         -ms-transition: opacity 0.2s linear;
         -moz-transition: opacity 0.2s linear;
         transition: opacity 0.2s linear;
-        z-index: 4; /* higher than most content, lower than tumblr_controls */
+        z-index: 4;
     }
 
     .below-header .nav-menu-bg {
@@ -1330,11 +1320,6 @@ body.android-lt-4-4 {
         background-size: 50px 50px;
     }
 
-    .tumblr_audio_player {
-        margin-top: 10px;
-        padding: 0;
-    }
-
     #pagination a {
         margin-bottom: 0;
     }
@@ -1399,11 +1384,6 @@ body.android-lt-4-4 {
     .print-only {
         display: block;
         visibility: visible;
-    }
-
-    #tumblr_controls,
-    .post-controls {
-        display: none !important;
     }
 
     .header-image-wrapper {
